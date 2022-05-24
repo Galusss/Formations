@@ -1,0 +1,43 @@
+//MAIN BUTTON
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4EBF2;
+    border: solid 2px #3B2D39;
+    border-radius: 20px;
+    width: 320px;
+    height: 60px;
+    margin: auto;
+}
+
+.btn:hover{
+    opacity: 0.70;
+    color: black;
+    font-weight: bold;
+}
+
+//HOME.HTML BUTTON SPECIFICATION
+.btn_home{
+    margin-top: 25px;
+}
+
+//PRODUIT.HTML BUTTON SPECIFICATION
+.btn-customize{
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+//PANIER.HTML BUTTON SPECIFICATION
+#clear-order_summary{
+    margin-top: 20px;
+}
+
+.div-confirm-order{
+    padding-top: 50px;
+}
+
+//CONFIRMATION.HTML BUTTON SPECIFICATION
+#btn-return-home{
+    margin-bottom: 30px;
+}

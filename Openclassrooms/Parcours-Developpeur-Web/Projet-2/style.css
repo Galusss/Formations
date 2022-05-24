@@ -1,0 +1,545 @@
+@charset "UTF-8";
+
+
+
+/* ##### FONTS ##### */
+
+@font-face 
+{
+	font-family: 'open_sansregular';
+	src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot');
+	src: url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.woff') format('woff'),
+	url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.ttf') format('truetype'),
+	url('fonts/opensans_regular_macroman/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face 
+{
+	font-family: 'open_sanssemibold';
+	src: url('fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot');
+	src: url('fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.woff') format('woff'),
+	url('fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.ttf') format('truetype'),
+	url('fonts/opensans_semibold_macroman/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} 
+
+/* ##### end FONTS ##### */
+
+
+
+/* ##### BALISES GENERALE ##### */
+
+body{
+    background-color: grey;
+}
+
+#bloc_page{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    background-color: #f0f1ec;
+    display: flex; /*Permet d'organiser les aside et la div "page_principale"*/
+    max-width: 900px; /*largeur page*/
+    margin: auto; /*centrer la page sur la largeur indiquer au dessus "max-width"*/
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    color: black;
+}
+
+/* ##### end BALISES GENERALE ##### */
+
+
+
+/* ##### ASIDE ##### */
+
+aside p{
+    text-align: justify;
+    margin: 0%;
+}
+
+#lisere{
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    background-color: #40C4FF;
+}
+
+#cadre_photo{
+    align-self: center; /*La photo est centré mais pas le reste*/
+    margin-top: 30px;
+    border: solid 5px rgba(66, 66, 66, 0.6);
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    overflow: hidden; /*La photo ne déborde pas*/
+}
+
+#photo_header_mobile{
+    display: none; /*La photo dans le header est uniquement présente sur mobile*/
+}
+
+.photo{
+    display: block;
+    max-width: 125%; /* zoom */
+    transform: translate(-1px, 0px); /*position de la photo*/
+}
+
+.titre_aside{
+    text-align: center;
+    text-transform: uppercase;
+    color: #40C4FF;
+    background-color: rgb(15,15,15);
+    padding: 3%;
+    font-family: open_sansregular, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+.titre_aside_aPropos{ /*Uniquement pour "A propos de moi"*/
+    text-align: center;
+    text-transform: uppercase;
+    color: #40C4FF;
+    background-color: rgb(15,15,15);
+    padding: 3%;
+    font-family: open_sanssemibold, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+
+.text_aPropos { /*Uniquement pour "A propos de moi"*/
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#a_propos{
+    flex:1; /* Prend toute la place disponnible */
+}
+
+.liste_contact{ /*Uniquement pour "A propos de moi"*/
+    padding-left: 8%;
+    font-weight: bold;
+    overflow-wrap: break-word;
+}
+
+.liste_contact li{
+    margin-bottom: 5%;
+}
+
+.icones_loisirs{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    color: rgb(15, 15, 15);
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+/* ##### end ASIDE ##### */
+
+
+
+/* ##### HEADER ##### */
+
+header{
+    margin-bottom: 12.5%;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Yamtramanav, Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+    color: black;
+    margin-top: 5%;
+    margin-bottom: 0;
+    margin-left: 6.5%;
+    padding-bottom: 0;
+}
+
+.prenom{
+    font-weight: 400;
+    color:#40C4FF;
+
+}
+
+h2{
+    margin-top: 0;
+    margin-left: 6.5%;
+    padding-top: 0;
+    font-size: 1.5em;
+    color: black;
+}
+
+#developpeur{
+    border-bottom: solid;
+    border-color: #40C4FF;
+}
+
+#photo_header_mobile{
+    display: none;
+    align-self: center;
+    margin-top: 30px;
+    border: solid 3px grey;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+/* ##### end HEADER ##### */
+
+
+
+/* ##### FORMATION / EXPERIENCE PRO / RECOMMANDATION  ##### */
+
+#page_principale{
+    flex: 1; /*La page prendra tout l'espace disponnible*/
+}
+
+.article_contenu{
+    margin-right: 30px;
+}
+
+.titre_contenu{
+    margin-left: 8%;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    border-bottom: solid #40C4FF;
+}
+
+.titre_contenu h3{
+    font-size: 1em;
+    margin: 0;
+}
+
+.icone_contenu{
+    color: #40C4FF;
+}
+
+.titre_contenu div{
+    margin-right: 5%;
+}
+
+.liste_contenu{
+    margin-left: 8%;
+    padding-left: 0;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.item_experience, .item_formation{ /*Bloc liste + Puce + Periode*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.bloc_liste{
+    display: flex;
+    font-weight: bold;
+}
+
+.puce{
+    color: #40C4FF;
+    font-size: 0.8em;
+    margin-right: 10px;
+}
+
+.puce, .periode{
+    margin-right:10px;
+}
+
+h4, h5{
+    display: inline-block;
+    margin: 0 0 1.5% 0;
+	/*titre de la formation toujours aligné horizontalement avec le paragraphe dessou / titre de la formation toujours aligné verticalement avec l'année / marge entre les titres h4/h5/paragraphe */
+}
+
+h4{
+    font-weight: bold;
+    font-size: 1.1em;
+
+}
+
+h5{
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.paragraphe p{
+    margin: 0px;
+}
+
+.item_formation{
+    max-width: 600px;
+}
+
+.item_experience{
+    max-width: 600px;
+}
+
+.item_recommandation{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-right: 105px;
+    margin-top: 10px;
+}
+
+p span{
+    font-weight: bold;
+}
+
+.paragraphe, p{
+    margin-left: 50px;
+}
+
+.ajustement_paragraphe{
+    margin-left: 10px;
+}
+
+.text_aPropos {
+    text-align: justify;
+}
+
+/* ##### end FORMATION / EXPERIENCE PRO / RECOMMANDATION  ##### */
+
+
+
+/* ##### Responsive Design (Media Queries)  ##### */
+
+/* Breakpoint entre 700 & 900PX */
+
+@media all and (max-width: 900px)
+{
+    #bloc_page{
+        flex-direction: column;
+        width: auto;
+    }
+
+    header{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: #40C4FF;
+    }
+
+    .prenom{
+        color: black;
+    }
+    
+    #developpeur{
+        border-bottom: solid;
+        border-color: #40C4FF;
+    }
+
+    h1
+	{
+		margin-top: 10px;
+    }
+    
+    h1, h2{
+        text-align: center;
+    }
+
+    #titre{
+        order: 3;
+        margin-top: 10px;
+    }
+
+    #photo_header_mobile{
+    display: block;
+    margin: auto;
+    border: solid 3px rgba(158,157,36 ,0.3);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    }
+
+    .photo_mobile{
+        width: 120%;
+        transform: translate(-12px, -80px);
+    }
+
+    #corps_contenu{
+        margin-top: 10px;
+    }
+
+    .item_experience, .item_experience{
+        justify-content: space-around;
+    }
+
+    .puce{
+        margin-right: 50px;
+        min-width: 100px;
+    }
+
+    .item_recommandation{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        padding-left: 30px;
+        
+    }
+
+    #lisere{
+        max-width: unset; /* désactive la largeur max fixé*/
+        order: 2;
+    }
+
+    .titre_aside, .titre_aside_aPropos{
+        padding: 0.8%;
+    }
+
+    #cadre_photo
+    {
+        display: none;
+    }
+
+    .liste_contact{
+        text-align: center;
+        padding: 0;
+    }
+
+    #a_propos p{
+        margin: 3%;
+    }
+
+    .liste_contact li{
+        
+        margin-bottom: 15px;
+    }
+}
+
+/* end Breakpoint entre 700 & 900PX */
+
+
+
+/* Breakpoint entre 619 & 700PX */
+
+@media all and (max-width: 700px)
+{
+    .liste_contact{
+        text-align: center;
+        padding: 0;
+    }
+
+    .item_recommandation{
+        padding-left: 190px;
+        text-align: center;
+}
+
+/* end Breakpoint entre 619 & 700PX */
+
+
+
+/* Breakpoint entre 576 & 619PX */
+
+@media all and (max-width: 619px) /* Ajustement Recommandation */
+{
+        .item_recommandation{
+        text-align: center;
+        padding: 0;
+        margin-left: 140px;
+        
+    }
+}
+
+/* end Breakpoint entre 576 & 619PX */
+
+
+
+/* Breakpoint pour 576PX et moins */
+
+@media all and (max-width: 576px)
+{
+    #bloc_page{
+        font-size: 0.9em;
+    }
+
+    .photo_header_mobile{
+        transform: translate(-12px, -100px);
+    }
+
+    h1, h2{
+        margin-left: 0; 
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .article_contenu{
+        margin-left: 5%;
+    }
+
+    .icone_contenu{
+        margin-left: 5%;
+    }
+
+    .titre_contenu{
+        margin: 0;
+        margin-top: 10%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .liste_contenu{
+        margin-left: 0;
+        text-align: center;
+   }
+
+   .item_experience, .item_formation{
+       flex-direction: column;
+       align-items: center;
+       margin-top: 10%
+   }
+
+   .bloc_liste{
+       margin-bottom: 3%;
+       align-items: center;
+       margin-right: auto;
+       margin-left: auto;
+    }
+
+    h5{
+        text-decoration: underline;
+    }
+
+    .paragraphe p{
+        margin-top: 3%;
+        text-align: justify;
+    }
+
+        .item_recommandation{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .periode{
+        margin-right: 100px;
+    }
+}
+
+/* Breakpoint pour 576PX et moins */
+
+/* ##### end Responsive Design (Media Queries)  ##### */

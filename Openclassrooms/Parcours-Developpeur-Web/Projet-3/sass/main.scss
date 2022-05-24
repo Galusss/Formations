@@ -1,0 +1,64 @@
+@font-face{
+    font-family: "Devonshire";
+    src: url("../../fonts/Devonshire-Regular.ttf");
+}
+$fonts-lanote-primary: "Devonshire";
+
+@font-face{
+    font-family: "Caveat Bold";
+    src: url("../../fonts/Caveat-Bold.ttf");
+}
+$fonts-lanote-secondary: "Caveat Bold";
+
+@font-face{
+    font-family: "Caveat Regular";
+    src: url("../../fonts/Caveat-Regular.ttf");
+}
+$fonts-txtMenus-Caveat: "Caveat Regular";
+
+@font-face{
+    font-family: "Junicode";
+    src: url("../../fonts/Junicode-Bold.ttf");
+}
+$fonts-lechic-primary: "Junicode";
+
+@font-face{
+    font-family: "Source Serif Pro Regular";
+    src: url("../../fonts/SourceSerifPro-Regular.otf");
+}
+$fonts-lechic-secondary: "Source Serif Pro Regular";
+
+@font-face{
+    font-family: "Source Serif Pro";
+    src: url("../../fonts/SourceSerifPro-Bold.otf"),
+}
+$fonts-lechic-presentation_plats: "Source Serif Pro";
+
+@font-face{
+    font-family: "Dancing Script";
+    src: url("../../fonts/DancingScript-Regular.otf");
+}
+$fonts-ledelice-primary: "Dancing Scripts";
+
+@font-face{
+    font-family: "Kaushan Script";
+    src: url("../../fonts/KaushanScript-Regular.ttf")
+}
+$fonts-txtMenus-KaushanS: "Kaushan Script";
+/* Cursive */ 
+.footer_infos, .header_infos, .btn{font-family: cursive;}
+/* Devonshire */
+.menu_lanote h2, .page_lanote_menu h2, .fin_de_menu {font-family: $fonts-lanote-primary;}
+/* Caveat Bold & Regular */
+.menu_lanote p, .anim-lanote {font-family: $fonts-lanote-secondary;} 
+#bloc_page_lanote p, #bloc_page_ledelice p, #bloc_page_lapalette p, .anim-commencer, .anim-continuer, .anim-terminer, .anim-esquisse, .anim-oeuvre, .anim-sommet {font-family: $fonts-txtMenus-Caveat;}
+/* Junicode */
+.menu_chic h2, .page_lechic_menu h2{font-family: $fonts-lechic-primary;}
+/*Source Serif Pro Regular*/ 
+#bloc_page_lechic p{font-family: $fonts-lechic-secondary;}
+/* Source Serif Pro" */
+.anim-appetit, .anim-papilles, .anim-gourmandises{font-family: $fonts-lechic-presentation_plats;}
+/* Dancing Scripts */
+.menu_ledelice h2, .page_ledelice_menu h2{font-family: $fonts-ledelice-primary;}
+/* Kaushan Script */
+.menu_ledelice p, .menu_lapalette h2, .page_lapalette_menu h2, .menu_lapalette p{font-family: $fonts-txtMenus-KaushanS;}

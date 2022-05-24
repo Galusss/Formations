@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+/* ########## GENERALE ########## */
+body{
+    display: flex;
+	flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: #FDCB46;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* ##### MENUS ##### */
+
+.titre-menus{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#bloc_page_lechic, #bloc_page_lanote, #bloc_page_lapalette, #bloc_page_ledelice{
+    box-shadow: 0px 0px 7px rgb(201, 193, 193);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    min-width: 800px;
+    margin-bottom: 100px;
+}
+
+#bloc_page_lanote{
+    height: 1100px;
+}
+
+#bloc_page_lechic, #bloc_page_lapalette, #bloc_page_ledelice{
+    height: 900px;
+}
+
+
+.page_lapalette_menu p, .page_lanote_menu p, .page_lechic_menu p, .page_ledelice_menu p{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page_lapalette_menu, .page_lanote_menu , .page_lechic_menu , .page_ledelice_menu {
+    width: 600px;
+}
+
+ #bloc_page_lechic h3, #bloc_page_lanote h3, #bloc_page_lapalette h3, #bloc_page_ledelice h3, .menu-titre_lanote, .menu-titre_lechic, .menu-titre_lapalette, .menu-titre_ledelice{
+    text-align: center;
+}

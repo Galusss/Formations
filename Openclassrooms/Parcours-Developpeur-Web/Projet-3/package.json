@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet dans le cadre de la formation développeur web proposer par openclassrooms",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./html/css/fonts.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galusss/Formation_projet3.git"
+  },
+  "author": "Galusss",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Galusss/Formation_projet3/issues"
+  },
+  "homepage": "https://github.com/Galusss/Formation_projet3#readme"
+}

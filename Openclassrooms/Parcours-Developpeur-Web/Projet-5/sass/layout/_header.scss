@@ -1,0 +1,22 @@
+.header{
+    background-color: #8c828a;
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav a{
+    margin-left: 15px;
+}
+
+.header-icone{
+    margin-left: 3px;
+}
+
+ header a:hover{
+    opacity: 0.7;
+}

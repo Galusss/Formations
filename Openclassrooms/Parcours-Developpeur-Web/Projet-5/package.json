@@ -1,0 +1,31 @@
+{
+  "name": "oricono-backend",
+  "version": "1.0.0",
+  "description": "1. Gérer des événements JavaScript\r  2. Interagir avec un web service avec JavaScript.\r  3. Valider des données issues de sources externes.\r  4. Créer un plan de test pour une application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./style.css",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.8",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.8",
+    "mongoose-unique-validator": "^2.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Galusss/Formation_projet5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Galusss/Formation_projet5/issues"
+  },
+  "homepage": "https://github.com/Galusss/Formation_projet5#readme"
+}

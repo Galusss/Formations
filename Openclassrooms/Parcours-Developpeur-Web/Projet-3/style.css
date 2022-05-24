@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+
+@import url("html/css/structure.css"); /* Permet d'importer la feuille css qui met en place le header et le footer */
+@import url("html/css/responsive.css"); /* Permet d'importer la feuille css qui met en place le responsive du site web */
+@import url("html/css/fonts.css"); /* Permet d'importer la feuille css qui met en place les fonts */
+@import url("html/css/animation.css"); /* Permet d'importer la feuille css qui met en place les animations */
+
+
+/* ########## GENERALE ########## */
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: #FDCB46;
+}
+
+
+/* ########## MENUS ########## */
+.flex1{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.flex2{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+/* ########## (MENU 1) "La note enchantée" ########## */
+.menu_lanote{
+    background-color: #FCDFDB;
+    box-shadow: 0px 0px 7px rgb(201, 193, 193);
+    height: 550px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 35px; 
+}
+@media screen and (max-width: 1050px){ 
+    .menu_lanote{
+        height: 400px;
+        min-width: 300px;
+    }
+}
+
+.menu_lanote h2, .menu_lanote p{
+    margin-bottom: 50px;
+}
+
+.menu_lanote h2{
+    font-size: 40px;
+    color: #3C1218;
+}
+
+.menu_lanote p{
+    font-size: 35px;
+    color: #3C1218;
+}
+
+
+/* ########## (MENU 2) "Le chic à la française" ########## */
+.menu_lechic{
+    background-color: #FFF5FE;
+    text-align: center;
+    box-shadow: 0px 0px 7px rgb(201, 193, 193);
+    height: 550px;
+    min-width: 400px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 35px; 
+}
+@media screen and (max-width: 1050px){ 
+    .menu_lechic{
+        height: 400px;
+        min-width: 300px;
+        margin-left: 30px;
+    }
+}
+
+.menu_lechic p{
+    color: #C77412;
+    font-size: 32px;   
+}
+
+.menu_lechic h2{
+	background: -webkit-linear-gradient(left, #D8852E , #905BFD);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255,0);
+    font-size: 28px;
+}
+
+
+/* ########## (MENU 3) "Le délice des papilles" ########## */
+.menu_ledelice{
+    background-color: #F9F9F9;
+    text-align: center;
+    box-shadow: 0px 0px 7px rgb(201, 193, 193);
+    height: 550px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 35px; 
+}
+@media screen and (max-width: 1050px){ 
+    .menu_ledelice{
+        height: 400px;
+        min-width: 300px;
+    }
+}
+
+.menu_ledelice p{
+    color: #2B91F8;
+    font-size: 32px;
+}
+
+.menu_ledelice h2{
+	background: -webkit-linear-gradient(left, #0431DF, #1789F9);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+}
+
+
+/* ########## (MENU 4) "La palette du goût" ########## */
+.menu_lapalette{
+    background-color: #FDFFFD;
+    text-align: center;
+    box-shadow: 0px 0px 7px rgb(201, 193, 193);
+    height: 550px;
+    min-width: 400px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+@media screen and (max-width: 1050px){ 
+    .menu_lapalette{
+        height: 400px;
+        min-width: 300px;
+        margin-left: 30px;
+    }
+}
+
+.menu_lapalette p{
+    color: #72BF56;
+    font-size: 30px;
+}
+
+.menu_lapalette h2{
+    background: -webkit-linear-gradient(left, #43973d, #beff7f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 33px;
+}
+
+/* ########## PROCHAINEMENT ########## */
+.prochainement{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 25px;
+    padding-bottom: 70px;
+}
+
+.btn{
+    color: #FDCB46;
+    background: #579C87;
+    border-radius: 8px;
+    width: 300px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 22px;
+}
+@media screen and (max-width: 1050px){ 
+    .btn{
+            width: 200px;
+    }
+}
+

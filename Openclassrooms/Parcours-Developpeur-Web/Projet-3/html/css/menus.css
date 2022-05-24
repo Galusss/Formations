@@ -1,0 +1,305 @@
+@charset "UTF-8";
+
+
+@import url("structure.css"); /* Permet d'importer la feuille css qui met en place le header et le footer */
+@import url("menus_bloc_page.css"); /* Permet d'importer la feuille css qui met en place le bloc_page des menus */
+@import url("responsive.css"); /* Permet d'importer la feuille css qui met en place le responsive du site web */
+@import url("fonts.css"); /* Permet d'importer la feuille css qui met en place les fonts */
+@import url("animation.css"); /* Permet d'importer la feuille css qui met en place les animations */
+
+.titre-menus{
+    font-size: 28px;
+    font-family: Arial;
+}
+@media screen and (max-width: 950px){
+    .titre-menus{
+        font-size: 24px;
+    }
+}
+
+/* ########## (MENU 1) "La note enchantée" ########## */
+/* ########## GENERALE ########## */
+#bloc_page_lanote{
+    background-color: #FDE0DC;
+    color: #3C1218;
+}
+
+#bloc_page_lanote .prix{
+    font-weight: bold;
+}
+
+#bloc_page_lanote p{
+    font-size: 24px;
+}
+@media screen and (max-width: 750px){
+    #bloc_page_lanote p{
+        font-size: 12px;
+    }
+}
+
+.page_lanote_menu h2{
+    text-align: center;
+    font-size: 40px;
+}
+@media screen and (max-width: 750px){
+    .page_lanote_menu h2{
+        font-size: 32px;
+    }
+}
+
+.prelude{
+    margin-top: 50px;
+}
+
+.point_orgue, .mouvement_final{
+    margin-top: 40px;
+}
+
+.fin_de_menu{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+.anim-lanote{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 750px){
+    .anim-lanote{
+        font-size: 20px;
+    }
+    .fin_de_menu{
+        font-size: 25px;
+    }
+}
+
+/* ########## ELEMENTS GRAPHIQUES ########## */
+.page_lanote_menu--img_titre{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.fin_de_menu img{
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.img-l-prelude, .img-l-orgue,.img-l-mouvement{
+    float: left;
+}
+
+.img-r-prelude, .img-r-orgue, .img-r-mouvement{
+    float: right;
+}
+
+.prelude h3, .point_orgue h3, .mouvement_final h3{
+    display: block;
+    margin: auto;
+    line-height: 2px;
+}
+
+
+/* ########## (MENU 2) "Le chic à la française" ########## */
+/* ########## GENERALE ########## */
+#bloc_page_lechic{
+    background-color: #FFF5FE;
+}
+
+#bloc_page_lechic .prix{
+    margin-right: 50px;
+}
+
+#bloc_page_lechic p{
+    margin-left: 50px;
+    font-size: 16.5px;
+}
+
+.page_lechic_menu h2{
+	background: -webkit-linear-gradient(left, #D8852E, #905BFD);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 44px;
+}
+
+.en_appetit{
+    color: #C77412;
+    margin-top: 80px;
+
+}
+
+.plaisir_papilles{
+    color: #A56799;
+    margin-top: 80px;
+}
+
+.gourmandises{
+    margin-top: 80px;
+    color: #6E4CCC;
+}
+
+@media screen and (max-width: 750px){
+    .page_lechic_menu h2{
+        font-size: 30px;
+    }
+    .anim-appetit, .anim-papilles, .anim-gourmandises{
+        font-size: 8px;
+    }
+    #bloc_page_lechic p{
+    font-size: 7px;
+    }
+}
+
+/* ELEMENTS GRAPHIQUES */
+.img-l-appetit, .img-l-papilles, .img-l-gourmandises{
+    float: left;
+}
+
+.img-r-appetit, .img-r-papilles, .img-r-gourmandises{
+    float: right;
+}
+
+.en_appetit h3, .plaisir_papilles h3, .gourmandises h3{
+    line-height: 2px;
+}
+
+
+/* ########## (MENU 3) "Le délices des papilles" ########## */
+/* ########## GENERALE ########## */
+#bloc_page_ledelice{
+    background-color: #F9F9F9;
+}
+
+#bloc_page_ledelice .prix{
+    margin-right: 50px;
+}
+
+#bloc_page_ledelice p{
+    margin-left: 50px;
+    font-size: 21px;
+}
+
+.page_ledelice_menu h2{
+	background: -webkit-linear-gradient(left, #0431DF, #1789F9);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.bien_commencer, .bien_continuer{
+    margin-top: 55px;
+}
+
+.bien_terminer{
+    margin-top: 55px;
+}
+
+.anim-commencer, .anim-continuer, .anim-terminer{
+    font-weight: 500;
+    font-size: 29px;
+}
+
+@media screen and (max-width: 750px){
+    .page_ledelice_menu h2{
+    font-size: 30px;
+    }
+    .anim-commencer, .anim-continuer, .anim-terminer{
+    font-size: 16px;
+    }
+    #bloc_page_ledelice p{
+    font-size: 9px;
+    }
+}
+
+/* ELEMENTS GRAPHIQUES */ 
+.img-l-commencer, .img-l-continuer, .img-l-terminer{
+    float: left;
+}
+
+.img-r-commencer, .img-r-continuer, .img-r-terminer{
+    float: right;
+}
+
+.bien_commencer h3, .bien_continuer h3, .bien_terminer h3{
+    line-height: 4px;
+}
+
+.bien_commencer img, .bien_continuer img, .bien_terminer img{
+    width: 27%;
+}
+
+/* ########## (MENU 4) "La palette du goût" ########## */
+/* ########## GENERALE ########## */
+#bloc_page_lapalette{
+    background-color: #FDFFFD;
+}
+
+#bloc_page_lapalette .prix{
+    margin-right: 50px;
+}
+
+#bloc_page_lapalette p{
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.page_lapalette_menu h2{
+    background: -webkit-linear-gradient(left, #3D9339, #BFFF7E);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.esquisse, .oeuvre{
+    margin-top: 50px;
+}
+
+.au_sommet{
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.anim-esquisse, .anim-oeuvre, .anim-sommet{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 750px){
+    .page_lapalette_menu h2{
+    font-size: 30px;
+    }
+
+    .anim-esquisse, .anim-oeuvre, .anim-sommet{
+    font-size: 18px;
+    }
+
+    #bloc_page_lapalette p{
+    font-size: 8px;
+    }
+}
+/* ELEMENTS GRAPHIQUES */ 
+.img-l-lapalette{
+    float: left;
+}
+
+.img-r-lapalette{
+    float: right;
+}
+
+.esquisse h3, .oeuvre h3, .au_sommet h3{
+    line-height: 5px;
+}
+
+
+/*Tout les menus*/
+.en_appetit img, .plaisir_papilles img, .gourmandises img, .prelude img, .point_orgue img , .mouvement_final img, .bien_commencer img, .bien_continuer img, .bien-terminer img, .esquisse img, .oeuvre img, .au_sommet img{
+    width:30%;
+}

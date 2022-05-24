@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "Devonshire";
+  src: url("../../fonts/Devonshire-Regular.ttf"); }
+@font-face {
+  font-family: "Caveat Bold";
+  src: url("../../fonts/Caveat-Bold.ttf"); }
+@font-face {
+  font-family: "Caveat Regular";
+  src: url("../../fonts/Caveat-Regular.ttf"); }
+@font-face {
+  font-family: "Junicode";
+  src: url("../../fonts/Junicode-Bold.ttf"); }
+@font-face {
+  font-family: "Source Serif Pro Regular";
+  src: url("../../fonts/SourceSerifPro-Regular.otf"); }
+@font-face {
+  font-family: "Source Serif Pro";
+  src: url("../../fonts/SourceSerifPro-Bold.otf"); }
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../fonts/DancingScript-Regular.otf"); }
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("../../fonts/KaushanScript-Regular.ttf"); }
+/* Cursive */
+.footer_infos, .header_infos, .btn {
+  font-family: cursive; }
+
+/* Devonshire */
+.menu_lanote h2, .page_lanote_menu h2, .fin_de_menu {
+  font-family: "Devonshire"; }
+
+/* Caveat Bold & Regular */
+.menu_lanote p, .anim-lanote {
+  font-family: "Caveat Bold"; }
+
+#bloc_page_lanote p, #bloc_page_ledelice p, #bloc_page_lapalette p, .anim-commencer, .anim-continuer, .anim-terminer, .anim-esquisse, .anim-oeuvre, .anim-sommet {
+  font-family: "Caveat Regular"; }
+
+/* Junicode */
+.menu_lechic h2, .page_lechic_menu h2 {
+  font-family: "Junicode"; }
+
+/*Source Serif Pro Regular*/
+#bloc_page_lechic p {
+  font-family: "Source Serif Pro Regular"; }
+
+/* Source Serif Pro" */
+.anim-appetit, .anim-papilles, .anim-gourmandises {
+  font-family: "Source Serif Pro"; }
+
+/* Dancing Scripts */
+.menu_ledelice h2, .page_ledelice_menu h2 {
+  font-family: "Dancing Scripts"; }
+
+/* Kaushan Script */
+.menu_ledelice p, .menu_lapalette h2, .page_lapalette_menu h2, .menu_lapalette p {
+  font-family: "Kaushan Script"; }
+
+/*# sourceMappingURL=fonts.css.map */

@@ -1,0 +1,20 @@
+{
+    "name": "gael/blog",
+    "autoload": {
+        "psr-4": {
+            "Gael\\Blog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Galusss",
+            "email": "gael.paquien@protonmail.com"
+        }
+    ],
+    "require": {
+        "erusev/parsedown": "^1.7"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}

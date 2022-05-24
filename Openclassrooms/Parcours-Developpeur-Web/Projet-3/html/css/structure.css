@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+
+/* ########## GENERALE ########## */
+html, body{
+    width: 100%;
+    height: auto;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ##### HEADER #####*/
+.header_infos{
+    color: #FDCB46;
+    background-color: #579C87;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header_infos h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+/* ##### FOOTER ##### */
+.footer_infos{
+    background-color: #579C87;
+    height          : 50px;
+    position        : fixed;
+    bottom            : 0;
+    width           : 100%;
+    left            : 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.footer_infos{
+    color: #FDCB46;
+    display: flex;
+    justify-content: space-between;
+    width           : 100%;
+    color           : #ccc;
+} 
+
+.clic-mention{
+    margin-left: 15px;
+}
+
+.clic-contact{
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 950px){
+    .footer_infos, .header_infos, .btn{
+        font-family: Arial;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

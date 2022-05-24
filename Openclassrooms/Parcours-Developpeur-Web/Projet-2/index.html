@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Mon CV</title>
+
+<!--#################### css ####################-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/836800d8d5.js" crossorigin="anonymous"></script> <!--script Font Awesome-->
+        
+    </head>
+<!--#################### end css ####################-->
+
+            <body>     
+                <div id="bloc_page"> <!--Englobe tout le contenu de la page.-->
+                    
+
+
+
+<!--#################### lisere ####################-->
+            <aside id="lisere"> <!--Contient la photo, infos de contact, "a propos de moi" et les loisirs sous formes d'icones.-->
+                    <div id="cadre_photo"> <!--Contient un lien sous forme de photo.-->
+                        <a href="img/photo.png"><img src="img/photo_mini.png" alt="Photo de Gaël" class="photo"/></a>
+                    </div>
+              
+                <article id="contact"> <!--Contient les infos de contact avec un titre et une liste.-->
+                    <h3 class="titre_aside">CONTACT</h3>
+                        <ul class="liste_contact">
+                            <li>Adresse<br /><a href="https://www.google.fr/maps/place/Grenoble/@45.1842207,5.680523,13z/data=!3m1!4b1!4m5!3m4!1s0x478af48bd689be6f:0x618c10cd6e995398!8m2!3d45.188529!4d5.724524" title="Cliquez ici pour voir la localisation de Grenoble !" target="_blank">Grenoble, France</a></li>
+                            <li>Téléphone<br /><a href="tel:+33634068636" title="Cliquez ici pour me contacter par téléphone !">06 34 06 86 36</a></li>
+                            <li>Email<br /><a href="mailto:gael.paquien@hotmail.fr" title="Cliquez ici pour pour me contacter par Email !">gael.paquien@hotmail.fr</a></li>
+                            <li>Site web<br /><a href="https://github.com/Galusss" title="Cliquez ici pour vous rendre sur mon profil GitHub !" target="_blank">github.com/Galusss</a></li>
+                            <li>Skype<br /><a href="skype:live:.cid.411438dec1985a2f?call" title="Cliquez ici pour me contacter par Skype !">gael.paquien.contact@gmail.com</a></li>
+                        </ul>
+                </article>
+         
+                <article id="a_propos" title="A propos de moi"> <!--Contient "A propos de moi" avec un titre et un parapgraphe.-->
+                    <h3 class="titre_aside_aPropos">À PROPOS DE MOI</h3>
+                        <div class="text_aPropos">
+                            <p>Je m'appelle Gaël PAQUIEN et j'ai 20 ans ; je suis actuellement en formation pour faire une reconversion professionnelle en tant que développeur web. Sérieux dans ce que je j'entreprends je suis capable de m'adapter rapidement. Je suis quelqu'un qui est organisé et qui a une approche logique de manière générale. Je suis passionné par le numérique et toute la technologie qui l'entoure mais également par différentes activités comme voyager, cuisiner, le sport notamment le ski....</p>
+                        </div>
+                </article>
+         
+                 <article id="loisirs" title="Loisirs"> <!--Contient les losirs sous forme d'icone avec un titre et un div encadrant les icones.-->
+                    <h3 class="titre_aside">LOISIRS</h3>
+                        <div class="icones_loisirs">
+                            <span class="fa-stack fa-2x"><i class="far fa-circle fa-stack-2x icon-background"></i><i class="fas fa-laptop-code fa-sm fa-stack-1x"></i></span>
+                            <span class="fa-stack fa-2x"><i class="far fa-circle fa-stack-2x icon-background"></i><i class="fas fa-skiing fa-sm fa-stack-1x"></i></span>
+                            <span class="fa-stack fa-2x"><i class="far fa-circle fa-stack-2x icon-background"></i><i class="fas fa-utensils fa-sm fa-stack-1x"></i></span>
+                        </div>
+                </article>
+            </aside>
+<!--#################### end lisere ####################-->
+   
+
+
+<!--#################### header ####################-->
+            <section id="page_principale"> <!--Contient le header et la section principale.-->
+                <header> <!--La photo vient s'ajouter en version mobile.-->
+                    <h1><span class="prenom">GAËL</span> PAQUIEN</h1> <!--Le span permet de différencier le prénom du nom.-->
+                    <div id="titre"><h2><span id="developpeur">Dével</span>oppeur Web Freelance</h2></div> <!--Le span permet de dfférencier le début et la fin du mot Développeur afin d'y ajouter un style.-->
+                <!--UNIQUEMENT SUR MOBILE-->
+                <article id="photo_header_mobile">
+                    <h3>Ma photo</h3><a href="img/photo.png"><img src="img/photo_mini.png" alt="Photo de Gaël" class="photo_mobile" /></a>
+                </article>
+                <!--end UNIQUEMENT SUR MOBILE-->
+                </header>
+<!--#################### end header ####################-->
+
+
+
+                <div id ="corps_contenu"><!--Contient les 3 blocs principaux du CV sous forme d'articles.-->
+
+                    
+
+<!--#################### formation ####################-->
+                    <article class="article_contenu" title="Formation">
+                        <div class="titre_contenu"><div class="icone_contenu"><i class="fas fa-graduation-cap"></i></div><h3>Formations</h3></div>
+                            <ul class="liste_contenu">
+                                <li> <!--début Formation OPENCLASSROOMS-->
+                                    <div class="item_formation">
+                                        <div class="bloc_liste"> 
+                                            <div class="puce"><!--L'icone en puce-->
+                                                <i class="far fa-dot-circle"></i>
+                                            </div>
+                                            <div class="periode">
+                                            2020<br/>Grenoble
+                                            </div>
+                                        </div>
+                                
+                                        <div class="paragraphe">
+                                            <h4>OpenclassRooms</h4><br/>
+                                            <h5>Formation Développeur Web (certification de niveau 5)</h5>
+                                            <p>Le Développeur Web conçoit les fonctionnalités d'un site en respectant un cahier des charges pour respecter les besoins de ses clients.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li> <!--début Formation AUTODIDACTE-->  
+                                    <div class="item_formation">
+                                    <div class="bloc_liste">     
+                                            <div class="puce">
+                                                <i class="fas fa-circle fa-xs"></i>
+                                            </div>
+                                            <div class="periode">
+                                                2019<br/>Grenoble
+                                            </div>
+                                        </div>
+                                        <div class="paragraphe">
+                                            <h4>Autodidacte</h4><br/>
+                                            <h5>Formation Développeur Web en autodidacte</h5>
+                                            <p>Apprentissage en autodidacte des langages informatiques HTML5/CSS3/JS.</p>
+                                        </div>
+                                    </div>       
+                                </li> 
+                            </ul>
+                    </article>
+<!-- ####################end formation ####################-->
+
+
+
+<!--#################### experience pro ####################-->
+                    <article class="article_contenu" title="Experience Professionnelles">
+                        <div class="titre_contenu"><div class="icone_contenu"><i class="fas fa-briefcase"></i></div><h3>Expériences Professionnelles</h3></div>
+                         <ul class="liste_contenu">
+                             <li> <!--début Experience Pro ECONOCOM-->
+                                 <div class="item_experience">
+                                        <div class="bloc_liste">        
+                                            <div class="puce">     
+                                                <i class="far fa-dot-circle"></i>
+                                            </div>
+                                            <div class="periode">
+                                             2019<br/>Grenoble
+                                            </div>
+                                        </div>
+                                        <div class="paragraphe">
+                                            <h4>ECONOCOM - BPCE IT (Intérimaire pour LynxRH)</h4><br/>
+                                         <h5>Technicien Helpdesk N1</h5><br/>
+                                             <p>Assistance informatique et numérique ; prise d'information et résolution des incidents dans le secteur bancaire.</p>
+                                        </div>
+                                    </div>
+                             </li> <!--end Experience Pro ECONOCOM-->
+                                <li> <!--début Experience Pro SADEX-->
+                                    <div class="item_experience">
+                                        <div class="bloc_liste">
+                                            <div class="puce">
+                                                <i class="fas fa-circle fa-xs"></i>
+                                            </div>
+                                            <div class="periode">
+                                                2018<br/>Berland
+                                            </div>
+                                        </div>
+                                        <div class="paragraphe">
+                                        <div class="ajustement_paragraphe">
+                                            <h4>SADEX</h4><br/>
+                                            <h5>Agent de fabrication</h5><br/>
+                                            <p>Fabrication de foret conique, programmation du logiciel de travail sur rectifieuse, travail de précision.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li> <!--end Experience Pro SADEX-->
+                                <li> <!-- début Experience Pro Brigadier du Théâtre-->
+                                    <div class="item_experience">
+                                        <div class="bloc_liste">
+                                            <div class="puce">      
+                                                <i class="fas fa-circle fa-xs"></i>
+                                            </div>
+                                                <div class="periode">
+                                                2017<br/>Avignon
+                                            </div>
+                                            </div>
+                                        <div class="paragraphe">
+                                        <div class="ajustement_paragraphe">
+                                            <h4>Le Brigadier du Théâtre</h4><br/>
+                                            <h5>Commis de cuisine</h5><br/>
+                                            <p>Préparation des entrées et desserts sur tous les services en respectant les normes d'hygiène de restauration.</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </li> <!--end Experience Pro Brigadier du Théâtre-->
+                            </ul>
+                    </article>
+<!--#################### end experience pro ####################-->
+
+
+
+<!--#################### recommandation #################### -->
+                    <article class="article_contenu">
+                        <div class="titre_contenu"><div class=icone_contenu><i class="fas fa-pencil-alt"></i></div><h3>Recommandations</h3></div>
+                        <div class="item_recommandation">
+                            <p><span>MAXIME KIEMAN</span><br/><span>Directeur, Mon agence</span><br/>Téléphone : <a href="tel:+33001020304" title="Cliquez ici pour contacter Maxime KIEMAN par téléphone !">00 01 02 03 04</a><br/>Email : <a href="mailto:name@mail.com" title="Cliquez ici pour envoyer un Email a Maxime KIEMAN !">name@mail.com</a></p>
+                            <p><span>MAXIME KIEMAN</span><br/><span>Directeur, Mon agence</span><br/>Téléphone : <a href="tel:+33001020304" title="Cliquez ici pour contacter Maxime KIEMAN par téléphone !">00 01 02 03 04</a><br/>Email : <a href="mailto:name@mail.com" title="Cliquez ici pour envoyer un Email a MAXIME KIEMAN !">name@mail.com</a></p>
+                        </div>
+                    </article>
+<!--#################### end recommandation #################### -->
+
+
+
+                </div> <!--end corps_contenu-->     
+            </section>
+        </div> <!--end bloc_page-->
+    </body>
+</html>

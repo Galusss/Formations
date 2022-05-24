@@ -1,0 +1,21 @@
+{
+    "name": "gael/authentification",
+    "autoload": {
+        "psr-4": {
+            "Gael\\Authentification\\": "src/",
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Galusss",
+            "email": "gael.paquien@protonmail.com"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

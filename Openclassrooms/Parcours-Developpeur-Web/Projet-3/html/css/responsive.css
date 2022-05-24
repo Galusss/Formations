@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+/* ########## Ecran ayant une largeur maximum de 1050px ########## */
+@media screen and (max-width: 1050px){ 
+
+    /* ########## INDEX ########## */
+    .flex1, .flex2, .page_lanote_menu{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu_lechic{
+        position: relative;
+        right:15px;
+        margin-top: 50px;
+    }
+
+    .menu_lapalette{
+        position: relative;
+        right:15px;
+        margin-top: 50px;
+    }
+
+    .flex1{
+        margin-bottom: 50px;
+    }
+
+    /* ########## MENUS ########## */
+    #bloc_page_lanote, #bloc_page_lechic, #bloc_page_lapalette, #bloc_page_ledelice{
+        max-width: 750px;
+    }
+}
+
+
+/* ########## Ecran ayant une largeur minimum de 950px ########## */ 
+@media screen and (max-width: 950px){
+
+    /* ########## MENUS ########## */
+    #bloc_page_lanote, #bloc_page_lechic, #bloc_page_lapalette, #bloc_page_ledelice{
+        width: 80%;
+        min-width: 700px;
+    }
+}
+
+
+/* ########## Ecran ayant une largeur minimum de 750px ########## */
+@media screen and (max-width: 750px){
+
+    /* ########## MENUS ########## */
+    #bloc_page_lanote, #bloc_page_lechic, #bloc_page_lapalette, #bloc_page_ledelice{
+        width: 80%;
+        min-width: 310px;
+    }
+    
+    #bloc_page_lanote{
+        height: 800px;
+    }
+
+    #bloc_page_ledelice, #bloc_page_lapalette, #bloc_page_lechic{
+        height: 600px;
+    }
+}
