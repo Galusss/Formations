@@ -53,67 +53,58 @@
                         <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
                             <h3>Base de données</h3>
-                            <p class="lead mb-0">Schéma de conception, modèle de données</p>
+                            <p class="lead mb-0">Schéma de conception, Modèle de données</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Image Showcases-->
-        <section class="showcase">
+        <!-- Presentation -->
+        <section class="presentation">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Fully Responsive Design</h2>
-                        <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                    <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('assets/img/bg-uml-use-case.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto presentation-text">
+                        <h2>UML - Cas d'utilisation</h2>
+                        <p class="lead mb-0">Les diagrammes de cas d'utilisation modélisent le comportement d'un système et permettent de capturer les exigences de ce système.</p>
+                        <a href="assets/download/use-case.zip" download="uml-use-case.zip" class="downloadBtn btn btn-primary">Télécharger les diagrammes</a>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
-                    <div class="col-lg-6 my-auto showcase-text">
-                        <h2>Updated For Bootstrap 5</h2>
-                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                    <div class="col-lg-6 text-white presentation-img" style="background-image: url('assets/img/bg-uml-sequence.jpg')"></div>
+                    <div class="col-lg-6 my-auto presentation-text">
+                        <h2>UML - Séquences</h2>
+                        <p class="lead mb-0">Les diagrammes de séquences sont la représentation graphique des interactions entre les acteurs et le système.</p>
+                        <a href="assets/download/sequences.zip" download="uml-sequences.zip" class="downloadBtn btn btn-primary">Télécharger les diagrammes</a>
                     </div>
                 </div>
                 <div class="row g-0">
-                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
-                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                        <h2>Easy to Use & Customize</h2>
-                        <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                    <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('assets/img/bg-uml-classe.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto presentation-text">
+                        <h2>UML - Classes</h2>
+                        <p class="lead mb-0">Le diagramme de classes est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que leurs relations.</p>
+                        <a href="assets/download/classes.zip" download="uml-classes.zip" class="downloadBtn btn btn-primary">Télécharger le diagramme</a>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white presentation-img" style="background-image: url('assets/img/bg-db-schema.png')"></div>
+                    <div class="col-lg-6 my-auto presentation-text">
+                        <h2>Base de données - Schéma de conception</h2>
+                        <p class="lead mb-0">Le schéma de base de données est une structure d'une base de données décrite dans un langage formel pris en charge par le système de gestion de base de données.</p>
+                        <a href="assets/download/schema.zip" download="db-schema.zip" class="downloadBtn btn btn-primary">Télécharger le schéma</a>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('assets/img/bg-db-dump.png')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto presentation-text">
+                        <h2>Base de données - Modèle de données</h2>
+                        <p class="lead mb-0">En informatique, un modèle de données est un modèle qui décrit la manière dont sont représentées les données dans une organisation métier, un système d'information ou une base de données.</p>
+                        <a href="assets/download/database.zip" download="db-dump.zip" class="downloadBtn btn btn-primary">Télécharger le dump de la base de données</a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Testimonials-->
-        <section class="testimonials text-center bg-light">
-            <div class="container">
-                <h2 class="mb-5">What people are saying...</h2>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
-                            <h5>Margaret E.</h5>
-                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
-                            <h5>Fred S.</h5>
-                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                            <img class="img-fluid rounded-circle mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
-                            <h5>Sarah W.</h5>
-                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <!-- Call to Action-->
         <section class="call-to-action text-white text-center" id="signup">
             <div class="container position-relative">
