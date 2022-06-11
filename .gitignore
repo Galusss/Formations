@@ -3,6 +3,7 @@ Thumbs.db
 .DS_Store
 .vscode
 composer.lock
+composer.lock.json
 package.lock
 package-lock.json
 node_modules
