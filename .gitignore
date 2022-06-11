@@ -1,0 +1,10 @@
+Thumbs.db
+.idea
+.DS_Store
+.vscode
+composer.lock
+package.lock
+package-lock.json
+node_modules
+.sass-cache
+.env
