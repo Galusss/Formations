@@ -1,22 +1,10 @@
-.features-icons {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  border-bottom: 1px solid black;
-}
-.features-icons .features-icons-item {
-  max-width: 20rem;
-}
-.features-icons .features-icons-item .features-icons-icon {
-  height: 7rem;
-}
-.features-icons .features-icons-item .features-icons-icon i {
-  font-size: 4.5rem;
-}
-
+/**************
+HEADER
+**************/
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("../img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -45,6 +33,29 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
+
+/**************
+ICONS GRID
+**************/
+.features-icons {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid black;
+}
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+
+/**************
+PRESENTATION
+**************/
 .presentation{
   margin-top: 30px;
 }
@@ -60,7 +71,7 @@ header.masthead h1, header.masthead .h1 {
 }
 .presentation .row {
   margin-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 60px;
   padding-top: 25px;
   border-bottom: 1px solid black;
 }
@@ -70,6 +81,24 @@ header.masthead h1, header.masthead .h1 {
   }
 }
 
+
+/**************
+SQL
+**************/
+.sqlTitle {
+  margin: 50px;
+}
+.accordion-button {
+  font-size: 22px;
+}
+.accordion-body {
+  font-size:18px;
+}
+
+
+/**************
+FOOTER
+**************/
 #footer {
   background: #F8F9FA;
   padding: 30px 0;
