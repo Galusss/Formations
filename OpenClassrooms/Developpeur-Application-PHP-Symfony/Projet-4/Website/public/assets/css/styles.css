@@ -1,5 +1,5 @@
 /**************
-HEADER
+NAVBAR & HEADER
 **************/
 header.masthead {
   position: relative;
@@ -31,6 +31,9 @@ header.masthead h1, header.masthead .h1 {
   header.masthead h1, header.masthead .h1 {
     font-size: 1.8rem;
   }
+}
+#navbarDropdown, .nav-link {
+  color: black;
 }
 
 
@@ -85,6 +88,9 @@ PRESENTATION
 /**************
 SQL
 **************/
+#sql {
+  padding-bottom: 50px;
+}
 .sqlTitle {
   margin: 50px;
 }

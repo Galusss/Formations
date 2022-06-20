@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="Expressfood est une application de restauration en ligne." />
-        <title>Expressfood</title>
+        <title>ExpressFood</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -35,10 +35,32 @@
     ?> 
 
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Expressfood</a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#">ExpressFood</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Accueil</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Diagrammes UML</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#umlUseCase">Cas d'utilisation</a></li>
+                                <li><a class="dropdown-item" href="#umlSequences">Séquences</a></li>
+                                <li><a class="dropdown-item" href="#umlClasses">Classes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Base de données</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#bddConception">Schéma de conception</a></li>
+                                <li><a class="dropdown-item" href="#bddModele">Modèle de données (dump)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#sql">Requêtes SQL</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -56,7 +78,7 @@
             </div>
         </header>
 
-        <!-- Icons Grid-->
+        <!-- Icons Grid -->
         <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">
@@ -81,7 +103,7 @@
         <!-- Presentation -->
         <section class="presentation">
             <div class="container-fluid p-0">
-                <div class="row g-0">
+                <div class="row g-0" id="umlUseCase">
                     <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('./assets/img/bg-uml-use-case.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto presentation-text">
                         <h2>UML - Cas d'utilisation</h2>
@@ -89,7 +111,7 @@
                         <a href="./assets/download/use-case.zip" download="uml-use-case.zip" class="downloadBtn btn btn-primary">Télécharger les diagrammes</a>
                     </div>
                 </div>
-                <div class="row g-0">
+                <div class="row g-0" id="umlSequences">
                     <div class="col-lg-6 text-white presentation-img" style="background-image: url('./assets/img/bg-uml-sequence.jpg')"></div>
                     <div class="col-lg-6 my-auto presentation-text">
                         <h2>UML - Séquences</h2>
@@ -97,7 +119,7 @@
                         <a href="./assets/download/sequences.zip" download="uml-sequences.zip" class="downloadBtn btn btn-primary">Télécharger les diagrammes</a>
                     </div>
                 </div>
-                <div class="row g-0">
+                <div class="row g-0" id="umlClasses">
                     <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('./assets/img/bg-uml-classe.jpg')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto presentation-text">
                         <h2>UML - Classes</h2>
@@ -105,7 +127,7 @@
                         <a href="./assets/download/classes.zip" download="uml-classes.zip" class="downloadBtn btn btn-primary">Télécharger le diagramme</a>
                     </div>
                 </div>
-                <div class="row g-0">
+                <div class="row g-0" id="bddConception">
                     <div class="col-lg-6 text-white presentation-img" style="background-image: url('./assets/img/bg-db-schema.png')"></div>
                     <div class="col-lg-6 my-auto presentation-text">
                         <h2>Base de données - Schéma de conception</h2>
@@ -113,7 +135,7 @@
                         <a href="./assets/download/schema.zip" download="db-schema.zip" class="downloadBtn btn btn-primary">Télécharger le schéma</a>
                     </div>
                 </div>
-                <div class="row g-0">
+                <div class="row g-0" id="bddModele">
                     <div class="col-lg-6 order-lg-2 text-white presentation-img" style="background-image: url('./assets/img/bg-db-dump.png')"></div>
                     <div class="col-lg-6 order-lg-1 my-auto presentation-text">
                         <h2>Base de données - Modèle de données</h2>
@@ -125,7 +147,7 @@
         </section>
 
         <!-- SQL -->
-        <section class="sql">
+        <section id="sql">
            <h2 class="text-center sqlTitle">Quelques requêtes SQL</h2>
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
@@ -188,7 +210,10 @@
                                 INNER JOIN produit as C ON B.produit_id = C.id
                                 WHERE A.statut = "Livré"';
                                 $query = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-                                $query->execute();      
+                                $query->execute(); 
+                                $orders = $query->fetchAll(PDO::FETCH_ASSOC);
+                                var_dump($orders);
+                                /*   
                                 while ($orders = $query->fetch(PDO::FETCH_ASSOC)) {
                                     echo(
                                         'ID de commande : ' . $orders['idCommande'] 
@@ -196,6 +221,7 @@
                                         . ' (' . $orders['prix'] . '€)' . '<br>'
                                     );
                                 }
+                                */
                             ?>
                         </div>
                     </div>
