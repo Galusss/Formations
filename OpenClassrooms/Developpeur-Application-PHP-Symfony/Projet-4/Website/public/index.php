@@ -211,8 +211,10 @@
                                 WHERE A.statut = "Livré"';
                                 $query = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
                                 $query->execute(); 
-                                $orders = $query->fetchAll(PDO::FETCH_ASSOC);
-                                var_dump($orders);
+                                $orders = $query->fetchAll(PDO::FETCH_ASSOC);                        
+                                for ($i=0; $i < count($orders) ; $i++) {
+                                    echo $orders[$i]["idCommande"];
+                                }
                                 /*   
                                 while ($orders = $query->fetch(PDO::FETCH_ASSOC)) {
                                     echo(
