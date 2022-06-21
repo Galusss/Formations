@@ -31,7 +31,7 @@
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
-        }  
+        }
     ?> 
 
     <body>
@@ -70,7 +70,6 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
-                            <!-- Page heading-->
                             <h1 class="mb-5">Concevez la solution technique d'une application de restauration en ligne, ExpressFood</h1>
                         </div>
                     </div>
@@ -153,17 +152,31 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Liste des utilisateurs standard (ne prend pas en compte les livreurs et administrateurs) :
+                            Liste des utilisateurs :
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <?php
-                                $sql = 'SELECT nom, prenom FROM utilisateur WHERE role = :role';
+                                $sql = 
+                                'SELECT 
+                                    nom, 
+                                    prenom,
+                                    email,
+                                    telephone,
+                                    role,
+                                    date_creation
+                                FROM utilisateur
+                                ORDER BY role';
                                 $query = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-                                $query->execute(array(':role' => 'user'));
+                                $query->execute();
                                 while ($users = $query->fetch(PDO::FETCH_ASSOC)) {
-                                    echo "- " . $users["prenom"] . " " . $users["nom"] . "<br>";
+                                    echo $users['prenom'] . ' ' . $users['nom'] . '<br>';
+                                    echo 'Email : ' . $users['email'] . '<br>';
+                                    echo 'Téléphone : ' . $users['telephone'] . '<br>';
+                                    echo 'Compte créer le : ' . $users['date_creation'] . '<br>'; 
+                                    echo 'Permissions : ' . $users['role'] . '<br>';
+                                    echo '<br>';
                                 }
                             ?>
                         </div>
@@ -177,18 +190,31 @@
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <?php 
+                            <?php                                
                                 $sql = 
-                                'SELECT A.id as idCommande, statut, prix, date_creation, nom, prenom FROM commande as A
-                                INNER JOIN utilisateur as B ON A.utilisateur_id = B.id';
+                                'SELECT 
+                                    A.id as idCommande, 
+                                    A.date_commande as dateCommande,
+                                    A.statut as statutCommande,
+                                    A.prix as prixCommande,
+                                    B.nom as nomClient, 
+                                    B.prenom as prenomClient,
+                                    B.email as emailClient,
+                                    C.nom as nomLivreur,
+                                    C.prenom as prenomLivreur,
+                                    C.email as emailLivreur
+                                FROM commande as A
+                                INNER JOIN utilisateur as B ON A.utilisateur_id = B.id
+                                INNER JOIN utilisateur as C ON A.livreur_id = C.id';
                                 $query = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
                                 $query->execute();
                                 while ($orders = $query->fetch(PDO::FETCH_ASSOC)) {
                                     echo 'ID de commande : ' . $orders["idCommande"] . '<br>';
-                                    echo 'Staut de la commande : ' .$orders["statut"] . '<br>';
-                                    echo 'Prix de la commande : ' . $orders["prix"] . "€" . '<br>';
-                                    echo 'Date de la commande : ' . $orders["date_creation"] . '<br>';
-                                    echo 'Client : ' . $orders["prenom"] . ' ' . $orders["nom"] . '<br>';
+                                    echo 'Staut de la commande : ' .$orders["statutCommande"] . '<br>';
+                                    echo 'Prix de la commande : ' . $orders["prixCommande"] . "€" . '<br>';
+                                    echo 'Date de la commande : ' . $orders["dateCommande"] . '<br>';
+                                    echo 'Client : ' . $orders["prenomClient"] . ' ' . $orders["nomClient"] . ' (' . $orders["emailClient"] . ')' . '<br>';
+                                    echo 'Livreur : ' . $orders["prenomLivreur"] . ' ' . $orders["nomLivreur"] . ' (' . $orders["emailLivreur"] . ')' . '<br>';
                                     echo '<br>';
                                 }
                             ?>
@@ -205,24 +231,77 @@
                         <div class="accordion-body">
                             <?php
                                 $sql = 
-                                'SELECT A.id as idCommande, B.produit_id, B.quantite_produit, C.nom, C.prix FROM commande as A 
+                                'SELECT 
+                                    A.id as idCommande,  
+                                    B.quantite_produit as quantiteProduit,
+                                    C.nom as nomProduit,
+                                    C.prix as prixProduit
+                                FROM commande as A 
                                 INNER JOIN commande_produit as B ON A.id = B.commande_id
                                 INNER JOIN produit as C ON B.produit_id = C.id
                                 WHERE A.statut = "Livré"';
                                 $query = $db->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
                                 $query->execute(); 
-                                $orders = $query->fetchAll(PDO::FETCH_ASSOC);                        
-                                for ($i=0; $i < count($orders) ; $i++) {
-                                    echo $orders[$i]["idCommande"];
+                                $orders = $query->fetchAll(PDO::FETCH_ASSOC);  
+                                $commandes = [];
+                                foreach ($orders as $key => $value) {
+                                    if(!isset($commandes[$value['idCommande']])) {
+                                        $commandes[$value['idCommande']] = [];
+                                    }
+                                    $commandes[$value['idCommande']][] = [
+                                        'nomProduit' => $value['nomProduit'], 
+                                        'quantiteProduit' => $value['quantiteProduit'],
+                                        'prixProduit' => $value['prixProduit']
+                                    ];
                                 }
-                                /*   
-                                while ($orders = $query->fetch(PDO::FETCH_ASSOC)) {
-                                    echo(
-                                        'ID de commande : ' . $orders['idCommande'] 
-                                        . ' - Produit : ' . $orders["nom"] . ' x' . $orders['quantite_produit'] 
-                                        . ' (' . $orders['prix'] . '€)' . '<br>'
-                                    );
+                                /*
+                                for ($i=0; $i < ; $i++) { 
+                                    # code...
                                 }
+                                */
+                                /*
+                                Array ( 
+                                    [2] => Array ( 
+                                        [0] => Array ( 
+                                            [idCommande] => 2 
+                                            [nomProduit] => Coca-cola 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 3 
+                                        ) 
+                                        [1] => Array ( 
+                                            [idCommande] => 2 
+                                            [nomProduit] => Salade césar 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 9 
+                                        ) 
+                                        [2] => Array ( 
+                                            [idCommande] => 2 
+                                            [nomProduit] => Lasagne 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 15 
+                                        ) 
+                                    ) 
+                                    [3] => Array ( 
+                                        [0] => Array ( 
+                                            [idCommande] => 3 
+                                            [nomProduit] => Fanta 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 3 
+                                        ) 
+                                        [1] => Array ( 
+                                            [idCommande] => 3 
+                                            [nomProduit] => Gratin dauphinois 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 17 
+                                        ) 
+                                        [2] => Array ( 
+                                            [idCommande] => 3 
+                                            [nomProduit] => Tiramisu 
+                                            [quantiteProduit] => 1 
+                                            [prixProduit] => 10 
+                                        ) 
+                                    ) 
+                                ) 
                                 */
                             ?>
                         </div>
