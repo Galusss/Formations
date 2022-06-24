@@ -8,7 +8,6 @@ header.masthead {
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
-
 }
 header.masthead:before {
   content: "";
@@ -20,20 +19,51 @@ header.masthead:before {
   left: 0;
   opacity: 0.5;
 }
-header.masthead h1, header.masthead .h1 {
-  font-size: 0.8rem;
+header.masthead h1 {
+  font-size: 28px;
 }
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+@media (max-width: 800px) { 
+  header.masthead h1 {
+    font-size: 20px;
   }
-  header.masthead h1, header.masthead .h1 {
-    font-size: 1.8rem;
+}
+@media (max-width: 500px) { 
+  header.masthead h1 {
+    font-size: 16px;
   }
 }
 #navbarDropdown, .nav-link {
   color: black;
+}
+.navbar-brand {
+  font-weight: 600;
+}
+.nav-link {
+  font-size: 18px;
+}
+
+
+/**************
+SCROLL TO TOP
+**************/
+#scrollToTop {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99;
+  border: none; 
+  outline: none; 
+  background-color: #555;
+  background: rgba(0,0,0,0.3);
+  color: white; 
+  cursor: pointer; 
+  padding: 8px; 
+  border-radius: 8px; 
+  font-size: 14px;
+}
+#scrollToTop:hover {
+  background-color: rgb(160, 159, 159);
 }
 
 
@@ -66,11 +96,13 @@ PRESENTATION
   padding: 3rem;
 }
 .presentation .presentation-img {
-  min-height: 30rem;
+  border: solid 1px black;
   background-size: cover;
+  height: 25rem;
 }
 .downloadBtn {
   margin-top: 15px;
+  font-size: 18px;
 }
 .presentation .row {
   margin-top: 20px;
@@ -97,6 +129,11 @@ SQL
 .accordion-button {
   font-size: 22px;
 }
+@media (max-width: 500px) {
+  .accordion-button {
+    font-size: 18px;
+  }
+}
 .accordion-body {
   font-size:18px;
 }
@@ -113,4 +150,5 @@ FOOTER
 }
 #footer .copyright {
   text-align: center;
+  font-size: 18px;
 }

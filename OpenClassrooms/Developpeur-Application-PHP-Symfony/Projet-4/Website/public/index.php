@@ -6,13 +6,13 @@
         <meta name="description" content="Expressfood est une application de restauration en ligne." />
         <title>ExpressFood</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <!-- Custom CSS-->
         <link href="./assets/css/styles.css" rel="stylesheet" />
     </head>
@@ -77,6 +77,9 @@
             </div>
         </header>
 
+        <!-- Scroll to top -->
+        <button onclick="topFunction()" id="scrollToTop"><i class="bi bi-arrow-up"></i></button> 
+
         <!-- Icons Grid -->
         <section class="features-icons bg-light text-center">
             <div class="container">
@@ -139,7 +142,7 @@
                     <div class="col-lg-6 order-lg-1 my-auto presentation-text">
                         <h2>Base de données - Modèle de données</h2>
                         <p class="lead mb-0">En informatique, un modèle de données est un modèle qui décrit la manière dont sont représentées les données dans une organisation métier, un système d'information ou une base de données.</p>
-                        <a href="./assets/download/database.zip" download="db-dump.zip" class="downloadBtn btn btn-primary">Télécharger le dump de la base de données</a>
+                        <a href="./assets/download/db.zip" download="db-dump.zip" class="downloadBtn btn btn-primary">Télécharger le dump de la base de données</a>
                     </div>
                 </div>
             </div>
@@ -249,60 +252,20 @@
                                         $commandes[$value['idCommande']] = [];
                                     }
                                     $commandes[$value['idCommande']][] = [
+                                        'idCommande' => $value['idCommande'],
                                         'nomProduit' => $value['nomProduit'], 
                                         'quantiteProduit' => $value['quantiteProduit'],
                                         'prixProduit' => $value['prixProduit']
                                     ];
                                 }
-                                /*
-                                for ($i=0; $i < ; $i++) { 
-                                    # code...
+                                foreach ($commandes as $commande) {
+                                    echo('ID de commande : ' . $commande[0]['idCommande'] . '<br>');
+                                    echo('Produits : ' . '<br>');
+                                    for ($i=0; $i < count($commande) ; $i++) { 
+                                        echo('- ' . $commande[$i]['nomProduit'] . ' x' . $commande[$i]['quantiteProduit'] . ' (' . $commande[$i]['quantiteProduit'] * $commande[$i]['prixProduit'] . '€)' . '<br>');
+                                    }
+                                    echo '<br>';
                                 }
-                                */
-                                /*
-                                Array ( 
-                                    [2] => Array ( 
-                                        [0] => Array ( 
-                                            [idCommande] => 2 
-                                            [nomProduit] => Coca-cola 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 3 
-                                        ) 
-                                        [1] => Array ( 
-                                            [idCommande] => 2 
-                                            [nomProduit] => Salade césar 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 9 
-                                        ) 
-                                        [2] => Array ( 
-                                            [idCommande] => 2 
-                                            [nomProduit] => Lasagne 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 15 
-                                        ) 
-                                    ) 
-                                    [3] => Array ( 
-                                        [0] => Array ( 
-                                            [idCommande] => 3 
-                                            [nomProduit] => Fanta 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 3 
-                                        ) 
-                                        [1] => Array ( 
-                                            [idCommande] => 3 
-                                            [nomProduit] => Gratin dauphinois 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 17 
-                                        ) 
-                                        [2] => Array ( 
-                                            [idCommande] => 3 
-                                            [nomProduit] => Tiramisu 
-                                            [quantiteProduit] => 1 
-                                            [prixProduit] => 10 
-                                        ) 
-                                    ) 
-                                ) 
-                                */
                             ?>
                         </div>
                     </div>
@@ -320,7 +283,7 @@
         </footer>
 
         <!-- Bootstrap JS-->
-        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <!-- Custom JS-->
         <script src="./assets/js/main.js"></script>
     </body>
